@@ -64,7 +64,7 @@ export function usePipelineSubmission(nodes, edges, envConfig, queryParams, vali
       .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
       .join('&');
 
-    const url = `/submit-job${queryString ? `?${queryString}` : ''}`;
+    const url = `https://seatunnel-2-3-12.onrender.com/submit-job${queryString ? `?${queryString}` : ''}`;
 
     try {
       const response = await fetch(url, {

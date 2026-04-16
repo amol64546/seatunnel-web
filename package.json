@@ -3,7 +3,6 @@
   "name": "seatunnel-web",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://seatunnel-2-3-12.onrender.com",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
