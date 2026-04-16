@@ -8,8 +8,7 @@ import ReactFlow, {
   useEdgesState,
   MarkerType,
   Panel,
-  Position,
-  updateEdge
+  Position
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import NodeConfigModal from './NodeConfigModal';

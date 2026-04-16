@@ -611,11 +611,11 @@ export const PLUGIN_TEMPLATES = {
           "x-goog-api-key": "token"
         },
         "custom_request_body": {
-          "model": "models/${model}",
+          "model": "models/{model}",
           "content": {
             "parts": [
               {
-                "text": "${input}"
+                "text": "{input}"
               }
             ]
           }
@@ -771,8 +771,8 @@ export const PLUGIN_TEMPLATES = {
       },
       "query": "mutation AddBook($title: String!, $author: String!) { addBook(title: $title, author: $author) { id title author } }",
       "variables": {
-        "title": "${title}",
-        "author": "${author}"
+        "title": "{title}",
+        "author": "{author}"
       }
     },
     "AmazonDynamoDB": {

@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-export function usePipelineSubmission(nodes, edges, envConfig, queryParams, validatePipeline, setNodes) {
+export function usePipelineSubmission(nodes, edges, envConfig, queryParams, validatePipeline) {
   const submitPipeline = useCallback(async () => {
     const validation = validatePipeline();
     if (!validation.valid) {
@@ -78,7 +78,7 @@ export function usePipelineSubmission(nodes, edges, envConfig, queryParams, vali
       console.error('Error submitting job:', error);
       alert('Failed to submit job');
     }
-  }, [nodes, edges, envConfig, queryParams, validatePipeline, setNodes]);
+  }, [nodes, edges, envConfig, queryParams, validatePipeline]);
 
   return { submitPipeline };
 }
