@@ -3,12 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # or your default branch
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,8 +26,8 @@ jobs:
 
       - name: Configure Git user
         run: |
-          git config --global user.name "amol64546"
-          git config --global user.email "amol64546@gmail.com"
+          git config --global user.name "${{ vars.GIT_USERNAME }}"
+          git config --global user.email "${{ vars.GIT_EMAIL }}"
 
 
       - name: Deploy to GitHub Pages
